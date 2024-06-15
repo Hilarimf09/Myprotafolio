@@ -7,33 +7,34 @@
 body {
     background-color: #171f3d;
     color: white;
-    padding-top: 90px; 
+}
+
+.container {
+    width: 85%;
+    /* border:1px solid red; */
 }
 
 /*style para el nav*/
 header{
     width: 100%;
-    height: 70px;
-    background-color: #097fa5;
-    position: fixed;
-    top:0;
+    /* border: 1px solid green; */
+    padding: 1em 0.5em;
+    /* background-color: #097fa5; */
+    /* position: fixed; */
+    /* top:0; */
     z-index: 1000; /*header encima de los demas elementos*/
 }
-.interior{
-    max-width: 100%;
-    padding: 0 10px;
+.nav-container{
+    /* padding: 0 10px; */
     margin:auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+
 }
-.interior {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 .logo{
-    padding: 5px 0;
+    /* padding: 5px 0; */
 }
 .logo img{
     height: 60px;
@@ -58,12 +59,14 @@ header{
     color: #ffff;
     text-align: center;
     text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
+    letter-spacing: .1em; /* add space between letter in words */
+    font-size: 16px;
+    /* font-weight: bold; */
     text-decoration: none; /*esto fue lo que me elimino las lineas que eran de links*/
-    font-weight: 12px 20px;
+    /* font-weight: 12px 20px; */
     display: block;
     transition: color .3s ease, transform 0.3s ease;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 /*estilo para cuando toque cambie de color y escale el elemento*/
 .navigation ul li:hover{
@@ -108,7 +111,10 @@ header{
 /*titulo*/
 .intro{
     text-align: left;
-    margin-top: 100px;
+    margin-bottom: 1.5em;
+    /* margin-top: 100px; */
+
+    /* border: 1px solid red; */
 }
 .intro-subtitulo{
     font-family: 'Roboto', sans-serif;
@@ -123,21 +129,36 @@ header{
     color: white;
 }
  /*aboutme*/
-.about-me {
+#about {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 100px 0;
+    /* margin: 100px 0; */
+    margin: 6em auto; /* code used to align in the middle. it means margin on top and bottom are 0 and left and right are auto*/
+    /* border: 1px solid red; */
 }
+
+.red-square {
+    display: flex; /* defautl style of flex is horizontal */
+    width: 40%;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    height: fit-content;
+
+}
+
+/* this one is Text not tex */
 .about-tex {
     flex: 1;
     padding-left: 20px;
     text-align: left;
+    
 }
 .about-tex h1 {
     font-size: 36px;
     color: #ffffff;
     font-weight: bold;
+    margin-bottom: 0.5em;
 }
 .about-tex p {
     font-size: 18px;
@@ -149,11 +170,11 @@ header{
     justify-content: center;
 }
 .about-image {
-    flex: 1;
+    /* flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left; ;
+    text-align: left; ; */
 }
 .about-image img {
     max-width: 50%; /* Ajustar el tamaño de la imagen */
@@ -162,8 +183,8 @@ header{
     border: 5px solid #097fa5; /* para redondear las esquinas de la imagen */
 }
 .about-image{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 /*Skills*/
@@ -186,7 +207,7 @@ header{
     width: 100%;
     background-color: #097fa5;
 }
-.container{
+.skils-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
