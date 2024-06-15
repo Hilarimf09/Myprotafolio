@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hilari Medina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="interior">
+            <a href="#" class="logo"><img src="imagens/logo.webp" alt="logo"></a>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li class="submenu">
+                        <a href="prj">Projects</a>
+                        <ul class="hijos">
+                            <li><a href="#">proj1</a></li>
+                            <li><a href="#">proj2</a></li>
+                            <li><a href="#">proj3</a></li>
+                            <li><a href="#">proj4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>      
+                </ul>
+            </nav>
+        </div>      
+    </header>
+   
+    <div class="intro">
+        <h3 class="intro-subtitulo">I'm a</h3>
+        <h1 class="intro-titulo">Software Developer.</h1>
+    </div>
+   
+
+    <section id="about" class="about-me">
+        <div class="about-image"> 
+            <img src="imagens/hilari.jpeg" alt="yo">
+        </div>
+
+       <div class="about-tex">
+            <h1>About me</h1>
+            <p>Software development student passionate about innovation, creativity, and continuous growth. 
+            I seek the opportunity to demonstrate that young people have the potential to grow professionally and give our best effort to the companies that trust us. 
+            I am eager to be part of a dynamic and collaborative environment where I can apply my passion for technology and create innovative solutions.</p>
+       </div>
+    </section>
+
+
+    <!--Problemas: recuerda, cuando agregaste los dos ultimos div los agregaste fuera de container por eso no tomaron el mismo formato!-->
+    <div id="skills" class="inner">
+        <div class="header">
+            <h1>My Skills</h1>
+        </div>
+        <div class="container">
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="imagens/html-5-icon-726x1024-evem6gg5.png" class="skill-icon">
+                    </div>
+                    <h3>HTML</h3> 
+                </div>
+                <P> A markup language used to structure and present content on the web.</P>   
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="imagens/css.png" class="skill-icon">
+                    </div>
+                    <h3>CSS</h3> 
+                </div>
+                <P> A style sheet language used to design and customize the appearance of web pages.</P>   
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="imagens/JavaScript-Symbol.png" class="skill-icon">
+                    </div>
+                    <h3>JAVASCRIPT</h3> 
+                </div>
+                <P> A programming language that allows adding interactivity and dynamism to web pages.</P>   
+            </div>
+            <div class="skill-box">
+                <div class="skill-title">
+                    <div class="img">
+                        <img src="imagens/React-icon.svg.png" class="skill-icon">
+                    </div>
+                    <h3>REACT</h3> 
+                </div>
+                      <P>A JavaScript library for building interactive user interfaces and reusable components.</P>   
+            </div>
+            <div class="skill-box">
+             <div class="skill-title">
+                <div class="img">
+                    <img src="imagens/postgresql_plain_wordmark_logo_icon_146390.png" class="skill-icon">
+                </div>
+                <h3>POSTGRESQL</h3> 
+             </div>
+                 <P>An advanced open-source relational database management system.</P>   
+            </div>
+            <div class="skill-box">
+            <div class="skill-title">
+                <div class="img">
+                    <img src="imagens/tailwindcss_logo_icon_170649.png" class="skill-icon">
+                </div>
+                <h3>TAILWINDCSS</h3> 
+            </div>
+                 <P>A utility-first CSS framework for rapidly building custom designs.</P>   
+            </div>
+        </div>
+    </div>
+
+
+    <section id="projects" class="projects-section">
+        <div class="projects-header">
+            <h2>My Projects</h2>
+        </div>
+        <div class="projects-container">
+            <div class="project-box">
+                <img src="" alt="Project1" class="project-img">
+                <h3>Project 1</h3>
+                <p>description of project 1.</p>
+                <a href="">View on GitHub</a>
+            </div>
+            <div class="project-box">
+                <img src="" alt="Project2" class="project-img">
+                <h3>Project 2</h3>
+                <p>description of project 2.</p>
+                <a href="">View on GitHub</a>
+            </div>
+            <div class="project-box">
+                <img src="" alt="Project3" class="project-img">
+                <h3>Project 3</h3>
+                <p>description of project 3.</p>
+                <a href="" >View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-section">
+        <div class="container-heading">
+            <h2>Keep in touch</h2>
+        </div>
+    </div>
+    <div id="contact" class="container-contact">
+        <div class="contact-form">
+            <h4>Send me a message...</h4>
+            <form class="form">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <textarea placeholder="Place your message here..."></textarea>
+                <button class="btn-submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

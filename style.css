@@ -1,0 +1,349 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Open Sans" sans-serif;
+}
+body {
+    background-color: #171f3d;
+    color: white;
+    padding-top: 90px; 
+}
+
+/*style para el nav*/
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #097fa5;
+    position: fixed;
+    top:0;
+    z-index: 1000; /*header encima de los demas elementos*/
+}
+.interior{
+    max-width: 100%;
+    padding: 0 10px;
+    margin:auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.interior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    padding: 5px 0;
+}
+.logo img{
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.logo img:hover{
+    transform: scale(1.1);
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.navigation ul{
+    list-style: none;
+    display:flex; /*espacio entre los elementos del nav*/
+    gap: 20px;
+}
+.navigation ul li{
+    position: relative;
+}
+.navigation ul li a{
+    color: #ffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none; /*esto fue lo que me elimino las lineas que eran de links*/
+    font-weight: 12px 20px;
+    display: block;
+    transition: color .3s ease, transform 0.3s ease;
+}
+/*estilo para cuando toque cambie de color y escale el elemento*/
+.navigation ul li:hover{
+    transform: scale(1.1);
+}
+.navigation ul li a:hover{
+    color: rgb(42, 40, 121);
+}
+
+/*recuerda que sino usas el HOVER NO FUNCIONA*/
+
+/*este es para mostrar el submenu al tocarlo*/
+.navigation ul li:hover .hijos{
+    display: block;
+}
+.navigation .submenu .hijos{
+    display: none;
+    background: #080228;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    padding: 10px 0; /*con esto le diste espacio a las opciones en el submenu*/
+    z-index: 1000; /*y con este estara encima de los demas elementos*/
+
+}
+.navigation .submenu .hijos li{
+    display: block;
+    border-bottom: 1px solid #ccc; /*anadiste la linea de espacio en el submenu*/
+}
+.navigation .submenu .hijos li a{
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    text-transform: none;
+}
+.navigation .submenu .hijos li a:hover{
+     color: #080228;
+     background: #111;
+}
+
+/*titulo*/
+.intro{
+    text-align: left;
+    margin-top: 100px;
+}
+.intro-subtitulo{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    color: grey;
+}
+.intro-titulo{
+    font-family: "DM Serif Display", serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: white;
+}
+ /*aboutme*/
+.about-me {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+.about-tex {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+.about-tex h1 {
+    font-size: 36px;
+    color: #ffffff;
+    font-weight: bold;
+}
+.about-tex p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+.about-tex p{
+    display: flex;
+    justify-content: center;
+}
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left; ;
+}
+.about-image img {
+    max-width: 50%; /* Ajustar el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px; /* para redondear las esquinas de la imagen */
+    border: 5px solid #097fa5; /* para redondear las esquinas de la imagen */
+}
+.about-image{
+    display: flex;
+    justify-content: center;
+}
+
+/*Skills*/
+.inner{
+    padding-top: 20px;
+}
+.header{
+    text-align: center;
+    color: #ffffff;
+    padding: 1rem;
+    position: relative;
+}
+.header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #097fa5;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1,2rem ;
+}
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+/*esto es para el efecto cuando toco la rayita azul */
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before{
+    width: 35px;
+}
+.skill-box:hover .img{
+    transform: translateY(10px);
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+.skill-title:after{/*estos son para poner la rayita de bajo*/
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 2px 0 0 2px;
+    background-color: #097fa5;
+    transition: .5s;
+}
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 0 2px 2px 0;
+    background-color: #097fa5;
+    transition: .5s;
+}
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgba(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+.skill-title{
+    color: #fff;
+    margin-top: 0.5rem;
+}
+.skill-icon{
+    width: 50px;
+    z-index: 2;
+}
+
+/*Contacto*/
+.container-section{
+    text-align: center;
+    padding: 2rem 0;
+}
+.container-heading h2{
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    color:#fff;
+}
+.container-heading h2::after { /*estos son para poner la rayita de bajo*/
+    content: '';
+    display: block; 
+    width: 100%; 
+    height: 4px; 
+    background-color: #097fa5; 
+    margin: 0.5rem auto 0; 
+}
+.container-contact{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 2rem 0;
+    margin-top: 0rem; 
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin-top: 2em auto 0;
+}
+.form input{
+    padding: 10px 20px;
+    margin-bottom:1em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+}
+.form textarea{
+    height: 150px;
+    background: none;
+    color: #ccc;
+    padding: 1.5em;
+    border: 1px solid #fff;
+}
+.btn-submit{
+    padding: 10px 20px;
+    margin: 1em;
+    border: none;
+    text-transform: uppercase;
+    background-color: #097fa5;
+    border-radius: 20px;
+    cursor: pointer;/*pone la manito del mouse*/
+}
+
+/*projects*/
+.projects-section{
+    padding: 3rem 1rem;
+    background-color: #f5f5f5;
+    color: #333;
+}
+.projects-header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.project-box {
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 300px; 
+    text-align: center; 
+    padding: 1rem; 
+}
